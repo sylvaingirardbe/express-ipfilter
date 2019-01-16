@@ -1,30 +1,30 @@
 {
-  "name": "express-ipfilter",
-  "description": "A light-weight IP address based filtering system",
-  "version": "0.3.1",
-  "author": "BaM Interactive",
+  "name": "@curaelabs/express-ipfilter",
+  "description": "A light-weight IP address based filtering system - based of of express-ipfilter but without the vulnerabilities.",
+  "version": "0.0.1",
+  "author": "Sylvain Girard",
   "dependencies": {
-    "ip": "~1.1.0",
-    "lodash": "~3.10.1",
-    "range_check": "^1.2.0"
+    "ip": "^1.1.5",
+    "lodash": "^4.17.11",
+    "range_check": "^1.4.0"
   },
   "devDependencies": {
-    "babel-preset-es2015": "^6.6.0",
-    "grunt": "^0.4.5",
-    "grunt-babel": "^6.0.0",
-    "grunt-check-dependencies": "^0.12.0",
-    "grunt-cli": "^1.2.0",
-    "grunt-contrib-copy": "^0.8.2",
-    "grunt-contrib-watch": "^0.6.1",
-    "grunt-eslint": "^19.0.0",
-    "grunt-mocha-istanbul": "^3.0.1",
-    "grunt-mocha-test": "~0.12.7",
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "grunt": "^1.0.3",
+    "grunt-babel": "^8.0.0",
+    "grunt-check-dependencies": "^1.0.0",
+    "grunt-cli": "^1.3.2",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-eslint": "^21.0.0",
+    "grunt-mocha-istanbul": "^5.0.2",
+    "grunt-mocha-test": "^0.13.3",
     "istanbul": "^0.4.0",
-    "load-grunt-tasks": "^3.3.0",
-    "minimatch": "^3.0.3",
-    "mocha": "^2.5.3",
-    "mocha-junit-reporter": "^1.9.1",
-    "publish": "^0.5.0"
+    "load-grunt-tasks": "^4.0.0",
+    "minimatch": "^3.0.4",
+    "mocha": "^5.2.0",
+    "mocha-junit-reporter": "^1.18.0"
   },
   "keywords": [
     "middleware",
@@ -40,8 +40,7 @@
   },
   "main": "index.js",
   "scripts": {
-    "test": "mocha -R spec",
-    "push": "publish"
+    "test": "mocha -R spec"
   },
   "license": "MIT"
 }

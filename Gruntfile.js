@@ -22,6 +22,7 @@ module.exports = function(grunt){
     eslint: {
       all: ['Gruntfile.js', 'src/**/*.js', 'test/**/*.js'],
       options: {
+        fix: true,
         'ecmaVersion': 6
       }
     },
