@@ -1,24 +1,16 @@
-⚠⚠⚠
-
-> This package is deprecated. There are some known issues with it and I just don't have the time to fix them. I also am not using nodejs anymore, so it doesn't make sense.
-
-⚠⚠⚠
-
-express-ipfilter: A light-weight IP address based filtering system
+@curaelabs/express-ipfilter: A light-weight IP address based filtering system
 =================================================================================
 
 This package provides easy IP based access control. This can be achieved either by blacklisting certain IPs and whitelisting all others, or whitelisting certain IPs and blacklisting all others.
 
-[![Circle CI](https://circleci.com/gh/baminteractive/express-ipfilter/tree/master.svg?style=svg)](https://circleci.com/gh/baminteractive/express-ipfilter/tree/master)
-
 ## Version
-0.3.1
+0.0.1
 
 ## Installation
 
 Recommended installation is with npm. To add node-ipfilter to your project, do:
 
-    npm install express-ipfilter
+    npm install @curaelabs/express-ipfilter
 
 ## Usage with Express
 
@@ -162,129 +154,11 @@ This will run `eslint`,`babel`, and `mocha` and output coverage data into `cover
 
 ## Changelog
 
-0.3.1
- * Fixes critical bug that allowed access when ips is empty and mode == 'allow'.
- * Adds minor speed improvements for middleware.
- * Minor spelling and documentation fixes in README
-
-0.3.0
- * Adds the ability to pass IPs by function so that we can dynamically retrieve white/black listed addresses.
-
-0.2.6
-- Minor change to the Contributing Guidelines to include updating the version numbers
-
-0.2.5
-* Added fields `status` and `statusCode` to the IpDeniedError object, which both equal `403`.
-
-0.2.4
-* For IPv4 addresses that have a port (as experienced with Azure web apps), the port is now stripped before comparing it with the contents of the whitelist or blacklist. Fixes issue #49.
-
-0.2.3
-* Fixed a bug that sent all logging through instead of just denied requests
-
-0.2.2
-* Added a customization point for IP detection
-* Fixed a bug with IPv4 over IPv6
-
-0.2.1
-* Add log level property.
-
-0.2.0
-* Changed how error handling works
-* Removed settings for specific vendor ip addresses and added `allowedHeaders` to support those header-based IP addresses.
-* You must now specifically require `IpFilter`, i.e. `var ipfilter = require('express-ipfilter').IpFilter;`
-* If you want to handle errors you must require the error type as well `var IpDeniedError = require('express-ipfilter').IpDeniedError;`
-
-0.1.1
-* Added a favicon to the example to suppress the 404 error looking for it.
-
-0.1.0
-* Changed default behavior of the library to disable reading forwarded IP headers. They must now be explicitly enabled.
-* Using `res.send` when a failure occurs to allow for different formats of `errorMessage`
-
-0.0.25
-* Switched from netmask to range_check (uses ipaddr.js)
-* Added support for IPv6 CIDR
-* Fixed issue with mixed IPv4 and IPv6 rules
-
-0.0.24
-* Added lib to version control
-
-0.0.23
-* added codio x-real-ip header
-
-0.0.22
-
-* Added IPv6 Support
-* Added build tools
-* Added test coverage and reporting
-
-0.0.20
-
-* Added a setting to explicitly allow CloudFlare and Forwarded IPs.  By default they are set to not allow these headers.  Thanks to @longstone!
-
-0.0.19
-
-* Added detection for CloudFlare forwarded ips - https://github.com/baminteractive/express-ipfilter/commit/9aa43af14f5a003bad3145eef658f429808818f9 (@lafama)
-
-0.0.18
-
-* Fixing bug when array of CIDR blocks are used
-
-0.0.16
-
-* Fixing bug when no IP address can be determined
-
-0.0.15
-
-* Minor bug fix
-
-0.0.14
-
-* Adding the ability to have exclusion urls
-
-0.0.12
-
-* Diagnostic Options
-
-0.0.11
-
-* Bug Fix for port logic
-
-0.0.10
-
-* Added support for IPs with port numbers
-
-0.0.9
-
-* Fixing deploy issues
-
-0.0.8
-
-* Auto deploys for npm
-
-0.0.7
-
-* Add support ip ranges.
-
-0.0.6
-
-* Fixed a bug when using console output
-
-0.0.5
-
-* Added ability to block by subnet mask (i.e. 127.0.0.1/24)
-* Added tests for cidr functionality
-
-0.0.4
-
-* Add tests
-* Update docs
-* Refactor, and restyle
-
 0.0.1
 
-* First revision
+* First revision - forked from express-filter
+* Updated all packages
+* Removed vulnerabilities
 
 ## Credits
 

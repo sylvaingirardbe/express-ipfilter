@@ -36,7 +36,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "http://github.com/baminteractive/express-ipfilter.git"
+    "url": "https://github.com/sylvaingirardbe/express-ipfilter.git"
   },
   "main": "index.js",
   "scripts": {
